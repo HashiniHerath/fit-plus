@@ -1,0 +1,25 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:fitplus123@cluster0.vnq6gg6.mongodb.net/fit_plus?retryWrites=true&w=majority&appName=Cluster0
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 5014057553-8gm9um6vnli3cle5rgigcdjpdrid14m9.apps.googleusercontent.com
+            clientSecret: tWZKVLxaD_ARWsriiiUFYoIk
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+app:
+  auth:
+    tokenSecret: nkwdkwndkbfkbqflqnflnqefnleqnvnoqvbobqofbqvnnfknqbfqbfqfefefhifewfhiebfwejfbwebfibwefbwebfiwefb
+    tokenExpirationMsec: 5600000
+  cors:
+    allowedOrigins: http://localhost:3000,http://localhost:8080
+  oauth2:
+    authorizedRedirectUris:
+      - http://localhost:3000/oauth2/redirect
